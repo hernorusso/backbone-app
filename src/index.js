@@ -1,4 +1,4 @@
-// backbone Model
+import Backbone from 'backbone';
 
 var Blog = Backbone.Model.extend({
   defaults: {

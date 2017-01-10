@@ -1,2 +1,8 @@
 # bower modules
 bower_components
+
+# node modules
+node_modules
+
+# built bundle with webpack
+dist
