@@ -3,24 +3,24 @@ const webpack = require('webpack');
 
 //  Plugins
 const jQueryProvider = new webpack.ProvidePlugin({
-   $: 'jquery'
+  $: 'jquery',
 });
 
 module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'webpack.bundle.js'
+    filename: 'webpack.bundle.js',
   },
   module: {
     loaders: [
-      { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
-    ]
+      { test: /\.js$/, exclude: /node_modules/, loader: ['babel-loader', 'eslint-loader'] },
+    ],
   },
   externals: {
-    jquery: 'jQuery'
+    jquery: 'jQuery',
   },
   plugins: [
-    jQueryProvider
-  ]
+    jQueryProvider,
+  ],
 };
