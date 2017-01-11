@@ -1,6 +1,6 @@
 import Backbone from 'backbone';
 
-var Blog = Backbone.Model.extend({
+const Blog = Backbone.Model.extend({
   defaults: {
     author: '',
     title: '',
@@ -10,17 +10,17 @@ var Blog = Backbone.Model.extend({
 
 // backbone Collection
 
-var Blogs = Backbone.Collection.extend({});
+const Blogs = Backbone.Collection.extend({});
 
 // instantiate two Blogs
 
-var blog1 = new Blog({
+let blog1 = new Blog({
   author: 'herno',
   title: 'herno\'s blog',
   url: 'http://hernoblog.com'
 });
 
-var blog2 = new Blog({
+let blog2 = new Blog({
   author: 'peter',
   title: 'peter\'s blog',
   url: 'http://peterblog.com'
@@ -28,7 +28,7 @@ var blog2 = new Blog({
 
 // instatiate a Collection
 
-var blogs = new Blogs([
+let blogs = new Blogs([
   blog1,
   blog2
 ]);
