@@ -6,3 +6,6 @@ node_modules
 
 # built bundle with webpack
 dist
+
+# npm log
+npm-debug.log

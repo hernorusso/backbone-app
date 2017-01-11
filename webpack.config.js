@@ -1,5 +1,10 @@
-var path = require('path');
-var webpack = require("webpack");
+const path = require('path');
+const webpack = require('webpack');
+
+//  Plugins
+const jQueryProvider = new webpack.ProvidePlugin({
+   $: 'jquery'
+});
 
 module.exports = {
   entry: './src/index.js',
@@ -13,14 +18,9 @@ module.exports = {
     ]
   },
   externals: {
-    jquery: 'jQuery',
-    backbone: 'Backbone',
-    underscore: '_'
+    jquery: 'jQuery'
   },
   plugins: [
-    new webpack.ProvidePlugin({
-       $: 'jquery',
-       _: 'underscore'
-    })
+    jQueryProvider
   ]
 };
