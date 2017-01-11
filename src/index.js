@@ -4,8 +4,8 @@ const Blog = Backbone.Model.extend({
   defaults: {
     author: '',
     title: '',
-    url: ''
-  }
+    url: '',
+  },
 });
 
 // backbone Collection
@@ -14,21 +14,23 @@ const Blogs = Backbone.Collection.extend({});
 
 // instantiate two Blogs
 
-let blog1 = new Blog({
+const blog1 = new Blog({
   author: 'herno',
   title: 'herno\'s blog',
-  url: 'http://hernoblog.com'
+  url: 'http://hernoblog.com',
 });
 
-let blog2 = new Blog({
+const blog2 = new Blog({
   author: 'peter',
   title: 'peter\'s blog',
-  url: 'http://peterblog.com'
+  url: 'http://peterblog.com',
 });
 
 // instatiate a Collection
 
-let blogs = new Blogs([
+const blogs = new Blogs([
   blog1,
-  blog2
+  blog2,
 ]);
+
+export default blogs;
